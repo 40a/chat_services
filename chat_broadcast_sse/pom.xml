@@ -14,7 +14,11 @@
             <version>4.7</version>
             <scope>test</scope>
         </dependency>
-
+        <!-- <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+        </dependency> -->
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-all</artifactId>
@@ -43,10 +47,27 @@
             <artifactId>jetty-continuation</artifactId>
             <version>9.4.0.v20161208</version>
         </dependency>
-
-    </dependencies>
+        
+    </dependencies> 
     <build>
         <plugins>
+            <plugin>
+				<groupId>com.jolira</groupId>
+				<artifactId>onejar-maven-plugin</artifactId>
+				<version>1.4.4</version>
+				<executions>
+					<execution>
+						<configuration>
+							<mainClass>de.affinitas.chat.service.ChatBroadcastSSEService</mainClass>
+							<onejarVersion>0.97</onejarVersion>
+							<attachToBuild>true</attachToBuild>
+						</configuration>
+						<goals>
+							<goal>one-jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
