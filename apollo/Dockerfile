@@ -28,6 +28,7 @@ RUN apt-get remove -y --purge wget \
     && rm -rf /var/lib/apt/lists/*
 
 # Creating a Broker Instance
+COPY ./apollo.xml /var/lib/broker/etc/apollo.xml
 
 WORKDIR /var/lib
 
