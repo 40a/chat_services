@@ -22,3 +22,6 @@
   * Monitoring will be implemented, using Prometheus. We can even make it auto-discoverable. JMX can be scraped at first. Application-specific metrics will be exposed to `/metrics` endpoint by developers.
   * Feature-toggling of new features will be also nice to have.
   * Having both feature-toggling and canary releases implemented, we can safely use [tesing and monitoring combined](https://www.theguardian.com/info/developer-blog/2016/dec/05/testing-in-production-how-we-combined-tests-with-monitoring) (also [described here](https://martinfowler.com/bliki/SyntheticMonitoring.html))
+* Security
+  * Albeit security is top-importance topic, taking into account that service will be exposed to external world from secure AWS environment by secure reverse-proxy on selected port only, and also underlying services are all conatinerized, at first it will be enough to make sure that all best practices of AWS and docker containers are implemented.
+  * Security best practices, as a part of `configuration as a code` must be treated the same way - no manual settings, delivery pipeline, versioning, automated testing.
