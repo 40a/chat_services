@@ -21,4 +21,4 @@
   * `/info` endpoint should be implemented, to expose current configuration, version info etc.
   * Monitoring will be implemented, using Prometheus. We can even make it auto-discoverable. JMX can be scraped at first. Application-specific metrics will be exposed to `/metrics` endpoint by developers.
   * Feature-toggling of new features will be also nice to have.
-  * Having both feature-toggling and canary releases implemented, we can safely use [tesing and monitoring combined](https://www.theguardian.com/info/developer-blog/2016/dec/05/testing-in-production-how-we-combined-tests-with-monitoring)
+  * Having both feature-toggling and canary releases implemented, we can safely use [tesing and monitoring combined](https://www.theguardian.com/info/developer-blog/2016/dec/05/testing-in-production-how-we-combined-tests-with-monitoring) (also [described here](https://martinfowler.com/bliki/SyntheticMonitoring.html))
