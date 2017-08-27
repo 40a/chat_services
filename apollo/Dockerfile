@@ -28,11 +28,12 @@ RUN apt-get remove -y --purge wget \
     && rm -rf /var/lib/apt/lists/*
 
 # Creating a Broker Instance
-COPY ./apollo.xml /var/lib/broker/etc/apollo.xml
 
 WORKDIR /var/lib
 
 RUN $APACHE_APOLLO_HOME/bin/apollo create broker
+
+COPY ./apollo.xml /var/lib/broker/etc/apollo.xml
 
 EXPOSE 61680 61681 61613 61614 61623 61624
 
